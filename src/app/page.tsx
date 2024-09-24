@@ -1,12 +1,9 @@
 'use client';
 import Footer from 'src/components/Footer';
-import TransactionWrapper from 'src/components/TransactionWrapper';
 import WalletWrapper from 'src/components/WalletWrapper';
 import { COMMUNITY_LINK } from 'src/links';
 import OnchainkitSvg from 'src/svg/CommunitySvg';
 import { useAccount } from 'wagmi';
-import LoginButton from '../components/LoginButton';
-import SignupButton from '../components/SignupButton';
 import SwapWrapper from 'src/components/SwapWrapper';
 import Image from 'next/image';
 import meetMochi from '../images/meet-mochi.png';
@@ -30,8 +27,7 @@ export default function Page() {
             <OnchainkitSvg />
           </a>
           <div className="flex items-center gap-3">
-            <SignupButton />
-            {!address && <LoginButton />}
+            <WalletWrapper />
           </div>
         </div>
       </section>

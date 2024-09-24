@@ -21,7 +21,6 @@ type WalletWrapperParams = {
 };
 export default function WalletWrapper({
   className,
-  text,
   withWalletAggregator = false,
 }: WalletWrapperParams) {
   return (
@@ -29,7 +28,6 @@ export default function WalletWrapper({
       <Wallet>
         <ConnectWallet
           withWalletAggregator={withWalletAggregator}
-          text={text}
           className={className}
         >
           <Avatar className="h-6 w-6" />

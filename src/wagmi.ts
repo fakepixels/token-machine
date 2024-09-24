@@ -38,7 +38,6 @@ export function useWamigConfig() {
 
     const wagmiConfig = createConfig({
       chains: [baseSepolia],
-      // turn off injected provider discovery
       multiInjectedProviderDiscovery: false,
       connectors,
       ssr: true,
