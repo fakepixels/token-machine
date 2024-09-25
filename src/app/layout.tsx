@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { NEXT_PUBLIC_URL } from '../config';
+import { DM_Sans } from 'next/font/google';
 
 import './global.css';
 import '@coinbase/onchainkit/styles.css';
@@ -12,6 +13,8 @@ const OnchainProviders = dynamic(
     ssr: false,
   },
 );
+
+const dmSans = DM_Sans({ subsets: ['latin'] });
 
 export const viewport = {
   width: 'device-width',
@@ -30,12 +33,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: { children: React.ReactNode }) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body className="flex items-center justify-center">
-        <OnchainProviders>{children}</OnchainProviders>
-      </body>
+    <html lang="en" className={dmSans.className}>
+      <body>{children}</body>
     </html>
   );
 }

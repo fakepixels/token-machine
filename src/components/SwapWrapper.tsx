@@ -5,11 +5,11 @@ import {
   SwapAmountInput, 
   SwapToggleButton, 
   SwapButton, 
-  SwapMessage,
   SwapSettings,
   SwapSettingsSlippageDescription,
   SwapSettingsSlippageInput,
   SwapSettingsSlippageTitle,
+  SwapToast,
 } from '@coinbase/onchainkit/swap'; 
 import { Wallet, ConnectWallet } from '@coinbase/onchainkit/wallet';
 import { useAccount, useSendTransaction } from 'wagmi';
@@ -56,7 +56,7 @@ export default function SwapComponents() {
           type="to"
         /> 
         <SwapButton className='bg-[#FF9D49] text-white'/> 
-        {/* <SwapMessage />  */}
+        <SwapToast />
         <SwapSettings>
           <SwapSettingsSlippageTitle>
             Max. slippage
